@@ -1,0 +1,122 @@
+/* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+body {
+    margin: 0;
+  }
+  
+  .navbar {
+    background-color: #BCB7DD;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .nav-branding img {
+    height: 40px;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    transition: 0.4s;
+  }
+  
+  .change.bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .change.bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .change.bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu.active {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #BCB7DD;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: 0.3s;
+    font-size: 20px;
+  }
+  
+  .nav-link:hover {
+    color: white;
+  }
+
+  .user-name {
+    font-size: 20px;
+  }
+
+  .logout-btn {
+    background-color: white;
+    border: 3px solid #BCB7DD;
+    color: black;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .logout-btn:hover {
+    background-color: #BCB7DD;
+    border: 3px solid white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
